@@ -1,0 +1,699 @@
+/* name: Saeed Hadi Al-Awlaqi
+     ID:2148946
+     Date:10/1/2025 */ 
+
+/* using border box modeling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* global settings */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #f5f5f5;
+    background-color: #0a0a0a;
+}
+
+/* container to center the content and give padding */
+.container {
+    max-width: 1200px;
+    margin: 60 px;
+    padding: 0 20px;
+}
+
+/* global variable for colors to create synergy gathered from websites such coolor.co/gradients */
+:root {
+    --primary-black: #0a0a0a;
+    --secondary-black: #1a1a1a;
+    --accent-black: #2a2a2a;
+    --gold-primary: #d4af37;
+    --gold-secondary: #b8941f;
+    --gold-light: #f4e4a6;
+    --text-light: #f5f5f5;
+    --text-gray: #b0b0b0;
+    --text-dark: #666666;
+}
+
+/* standard settings for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-light);
+}
+
+.text-gold {
+    color: var(--gold-primary);
+}
+
+
+/* define standard button styles */
+.btn-primary {
+    display: flex;
+    text-decoration: none;
+    gap: 16px;
+    margin-bottom: 48px;
+    background: var(--gold-secondary);
+    color: var(--primary-black);
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-size: 16px;
+
+}
+
+
+.btn-secondary {
+    text-decoration: none;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 45px;
+    color: var(--text-light);
+    border: 2px solid var(--primary-black);
+    background: var(--accent-black);
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+.btn-submit {
+    text-decoration: none;
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+    color: var(--primary-black);
+    padding: 16px;
+    font-size: 16px;
+}
+
+
+
+/* Header */
+.header {
+    background: rgba(10, 10, 10, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+}
+
+/* Navigation Bar settings will be used in all pages */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 75px;
+    width: 75px;
+    
+    
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold-primary);
+}
+
+
+
+
+
+
+/* main Section this include the settings of the main content in each page */
+
+
+.main-content {
+    display: grid;
+    margin: 100px 0;
+    gap: 60px;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    line-height: 1.1;
+}
+
+.main-description {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.main-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+
+
+.main-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--accent-black);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.main-image {
+    position: relative;
+    
+}
+
+.main-img {
+    width: 100%;
+    height: 500px;
+    align-self: center;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Pet Section mainly used in pets page */
+
+.section-header {
+    text-align: center;
+
+    margin-top: 100px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--gold-primary);
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Pet Grid Layout */
+.pet-grid {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Pet Card */
+.pet-card {
+
+  width: 320px;
+  height: auto;         
+  border: 1px solid var(--gold-primary);
+  border-radius: 6px;
+  background: var(--gold-secondary);
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* pet image section */
+.pet-image {
+  position: relative;
+}
+
+.pet-image img {
+  width: 100%;
+  height: 200px;
+  
+}
+
+
+.size-badge,
+.type-badge {
+  position: absolute;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+.size-badge {
+  top: 8px;
+  left: 8px;
+}
+
+
+
+.type-badge {
+  bottom: 8px;
+  left: 8px;
+}
+
+/* Content Section */
+.pet-content {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.pet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pet-name {
+  font-size: 18px;
+  margin: 0;
+}
+
+.pet-gender {
+  font-size: 14px;
+  color: #000000;
+}
+
+.pet-breed {
+  margin: 6px 0;
+  font-style: italic;
+  color: #555;
+}
+
+/* Tags */
+.personality-tags {
+  margin: 8px 0;
+}
+
+.personality-tags .tag {
+  display: inline-block;
+  background: #eee;
+  border-radius: 3px;
+  padding: 3px 6px;
+  margin: 2px;
+  font-size: 12px;
+}
+
+/* pet description */
+.pet-description {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+/* pet details */
+.pet-details {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+.detail {
+  margin: 2px 0;
+}
+
+/* pet special needs */
+.special-needs {
+  background: #f9f1c8;
+  border: 1px solid #e0d48f;
+  padding: 6px;
+  border-radius: 4px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.needs-title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+
+/*  services section mainly used in services page */
+.service-simple {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.service-text h2 {
+    font-size: 24px;
+    color: goldenrod;
+    margin-bottom: 10px;
+}
+
+.service-text p {
+    font-size: 16px;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+.service-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.service-features li {
+    font-size: 14px;
+    color: var(--gold-light);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+
+
+/* resources section mainly used in resources page */
+.resource-category h2 {
+    color: var(--gold-primary);
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+
+.resource-category h3 {
+    color: var(--gold-secondary);
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+
+.resource-category p {
+    font-size: 14px;
+    color: var(--gold-secondary);
+    margin-bottom: 8px;
+}
+
+/* Lists */
+.resource-category ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.resource-category li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+
+/* About Section used in fifferent pages */
+
+.about-content {
+    display: block;
+    gap: 60px;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.about-text {
+    text-align: center;
+    
+}
+.about-description {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+
+.about-img  {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--gold-primary);
+}
+
+.form-disclaimer {
+    font-size: 1.1rem;
+    color: var(--gold-primary);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* Adoption process section mainly used in adoption page */
+.process-steps {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    
+
+
+.process-step {
+    width: 100%;          /* make it flexible */
+    max-width: 500px;     /* don’t let it grow too big */
+    text-align: center;
+    margin-bottom: 12px;
+    background-color: var(--accent-black);
+    border-radius: 25px;
+    padding: 12px;
+}
+
+.step-number {
+    font-weight: bold;
+    color: var(--gold-primary);
+}
+
+
+.fee-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.fee-item {
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: var(--gold-primary);
+}
+
+.fee-type {
+    font-weight: bold;
+    color: var(--gold-primary);
+}
+
+.fee-amount {
+    color: var(--gold-secondary);
+}
+
+
+.document-list{
+    margin-bottom: 20px;
+    list-style: check;
+    color: var(--gold-primary);
+    text-align: center;
+}
+
+/* Contact Section mainly used in contact page */
+
+.contact-section {
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-section h3 {
+    margin-top: 20px;
+    color: var(--gold-primary);
+}
+
+.contact-section p,
+.contact-section ul {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-section li {
+    margin: 8px 0;
+}
+
+.contact-section a {
+    text-decoration: none;
+    color: var(--gold-secondary);
+}
+
+
+/* footer section used as page tail in each page */
+.footer-content {
+  background: #222;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Each section inside footer */
+.footer-brand,
+.footer-links,
+.footer-contact {
+  width: 23%; 
+}
+
+/* Logo area */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer-logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--gold-primary); 
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* Links */
+.footer-links h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--gold-primary);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* Contact section */
+.footer-contact h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ffd700;
+}
+
+.contact-item {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Bottom footer */
+.footer-bottom {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+
+
+
